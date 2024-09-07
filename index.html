@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scoring System</title>
+  <!-- Import Materialize CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+  <!-- Import Google Font for Material Design -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Font Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="monitoring.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <header class="header center-align">
+      <h3>Scoring System</h3>
+    </header>
+
+      <div class="card">
+        <div class="card-content1">
+          <!-- Date Time -->
+          <div class="row">
+            <div class="col s12 date_time">
+              <span class="blue-text text-darken-2">Date : 31-08-2024</span>
+              <span class="blue-text text-darken-2">Time : 10.13</span>
+            </div>
+          </div>
+
+          <!-- Logo -->
+          <div class="center-align">
+            <img src="./logo.png" width="150" height="120" alt="Logo">
+          </div>
+        </div>
+      </div>
+    <div class="row content">
+      <!-- Left Panel -->
+      <div class="col s12 m10 center-align">
+        <div class="row card">
+          <img
+            src="target.png"
+            alt="Target" class="responsive-img target-img">
+        </div>
+      </div>
+      <!-- Right Panel -->
+      <div class="col s12 m8">
+        <div class="card">
+          <div class="card-content">
+
+            <!-- Score Table -->
+            <div class="row">
+              <h5 class="blue-text text-darken-2 center-align">SCORE TABLE</h5>
+              <table>
+                <tr>
+                  <td class="head"> Name </td>
+                  <td> : </td>
+                </tr>
+                <tr>
+                  <td class="head"> Unit </td>
+                  <td> : </td>
+                </tr>
+                <tr>
+                  <td class="head"> Line </td>
+                  <td> : </td>
+                </tr>
+              </table>
+            </div>
+            <!-- Score Grid -->
+            <div class="row">
+              <table class="highlight centered">
+                <thead>
+                  <tr>
+                    <th>x</th>
+                    <th>10</th>
+                    <th>9</th>
+                    <th>8</th>
+                    <th>7</th>
+                    <th>0</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><input type="text" class="score-input" readonly></td>
+                    <td><input type="text" class="score-input" readonly></td>
+                    <td><input type="text" class="score-input" readonly></td>
+                    <td><input type="text" class="score-input" readonly></td>
+                    <td><input type="text" class="score-input" readonly></td>
+                    <td><input type="text" class="score-input" readonly></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- Total Score -->
+            <div class="row center-align">
+              <span class="total-score">Total Score: </span><span class="blue-text text-darken-2 total-score">X
+                X</span>
+            </div>
+            <!-- Buttons -->
+            <div class="card-action center-align">
+              <a class="waves-effect waves-light btn red darken-2 btn-full-width">Score</a>
+              <a class="waves-effect waves-light btn green darken-2 btn-full-width">Reset</a>
+              <a class="waves-effect waves-light btn yellow darken-2 btn-full-width">Print</a>
+              <a class="waves-effect waves-light btn orange darken-2 btn-full-width">Kalibrasi</a>
+            </div>
+            <!-- <div class="card-action center-align">
+            </div> -->
+          </div>
+        </div>
+
+        <!-- <div class="card">
+          <div class="card-content"> -->
+
+
+        <!-- </div> -->
+
+        <!-- </div> -->
+      </div>
+      <!-- <div class="col s12 m6">
+        <div class="card">
+          <div class="card-content">
+          </div>
+        </div>
+      </div> -->
+    </div>
+
+
+  </div>
+
+  <!-- Import Materialize JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+
+</html>
