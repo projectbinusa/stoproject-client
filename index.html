@@ -11,7 +11,8 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!-- Font Poppins -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <!-- Custom CSS -->
   <link rel="stylesheet" href="monitoring.css">
 </head>
@@ -23,35 +24,33 @@
       <h3>Scoring System</h3>
     </header>
 
-      <div class="card">
-        <div class="card-content1">
-          <!-- Date Time -->
-          <div class="row">
-            <div class="col s12 date_time">
-              <span class="blue-text text-darken-2">Date : 31-08-2024</span>
-              <span class="blue-text text-darken-2">Time : 10.13</span>
-            </div>
-          </div>
-
-          <!-- Logo -->
-          <div class="center-align">
-            <img src="./logo.png" width="150" height="120" alt="Logo">
-          </div>
+    <!-- <div class="card">
+        <div class="card-content">
         </div>
-      </div>
+      </div> -->
     <div class="row content">
       <!-- Left Panel -->
       <div class="col s12 m10 center-align">
         <div class="row card">
-          <img
-            src="target.png"
-            alt="Target" class="responsive-img target-img">
+          <img src="target.png" alt="Target" class="responsive-img target-img">
         </div>
       </div>
       <!-- Right Panel -->
       <div class="col s12 m8">
         <div class="card">
           <div class="card-content">
+            <!-- Date Time -->
+            <div class="row">
+              <div class="col s12 date_time">
+                <span class="blue-text text-darken-2">Date : 31-08-2024</span>
+                <span class="blue-text text-darken-2">Time : 10.13</span>
+              </div>
+            </div>
+
+            <!-- Logo -->
+            <div class="center-align">
+              <img src="./logo.png" width="150" height="120" alt="Logo">
+            </div>
 
             <!-- Score Table -->
             <div class="row">
@@ -103,10 +102,23 @@
             </div>
             <!-- Buttons -->
             <div class="card-action center-align">
-              <a class="waves-effect waves-light btn red darken-2 btn-full-width">Score</a>
-              <a class="waves-effect waves-light btn green darken-2 btn-full-width">Reset</a>
-              <a class="waves-effect waves-light btn yellow darken-2 btn-full-width">Print</a>
-              <a class="waves-effect waves-light btn orange darken-2 btn-full-width">Kalibrasi</a>
+              <a title="Score" class="waves-effect waves-light btn red darken-2 btn-full-width"><span
+                  class="material-symbols-outlined">
+                  score
+                </span></a>
+              <a title="Reset" class="waves-effect waves-light btn green darken-2 btn-full-width"><span
+                  class="material-symbols-outlined">
+                  restart_alt
+                </span></a>
+              <a title="Print" class="waves-effect waves-light btn yellow darken-2 btn-full-width"><span
+                  class="material-symbols-outlined">
+                  print
+                </span></a>
+              <a title="Kalibrasi"
+                class="waves-effect waves-light btn orange darken-2 btn-full-width material-icons">tune
+              </a>
+            </div>
+            <div class="card-action center-align">
             </div>
             <!-- <div class="card-action center-align">
             </div> -->

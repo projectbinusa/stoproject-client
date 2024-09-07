@@ -43,7 +43,7 @@ body {
 }
 
 .target-img {
-  width: 80%;
+  width: 85%;
   /* height: 500rem; */
   border-radius: 10px;
 }
@@ -149,7 +149,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 5px;
+}
+
+.card-action a {
+ display: flex;
+ align-items: center;
 }
 .card-content1 {
   padding-top: 10px;
