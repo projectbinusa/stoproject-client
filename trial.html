@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scoring System</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .container {
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      /* Styling for the layered buttons */
+      .circle-container {
+        position: relative;
+        width: 300px;
+        height: 400px;
+        margin: 0 auto;
+      }
+
+      .circle {
+        position: absolute;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        color: white;
+      }
+
+      .circle-0 {
+        background-color: #e0e0e0;
+        width: 300px;
+        height: 400px;
+        top: 0;
+        left: 0;
+      }
+
+      .circle-7 {
+        background-color: #f44336;
+        width: 250px;
+        height: 350px;
+        top: 25px;
+        left: 25px;
+      }
+
+      .circle-8 {
+        background-color: #ff9800;
+        width: 200px;
+        height: 300px;
+        top: 50px;
+        left: 50px;
+      }
+
+      .circle-9 {
+        background-color: #ffeb3b;
+        width: 150px;
+        height: 250px;
+        top: 75px;
+        left: 75px;
+      }
+
+      .circle-10 {
+        background-color: #4caf50;
+        width: 100px;
+        height: 200px;
+        top: 100px;
+        left: 100px;
+      }
+
+      .circle-x {
+        background-color: #2196f3;
+        width: 50px;
+        height: 150px;
+        top: 125px;
+        left: 125px;
+      }
+
+      .score-input {
+        width: 50px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header center-align">
+        <h3>Scoring System</h3>
+      </header>
+
+      <div class="circle-container">
+        <div class="circle circle-0" onclick="setScore(0)">0</div>
+        <div class="circle circle-7" onclick="setScore(7)">7</div>
+        <div class="circle circle-8" onclick="setScore(8)">8</div>
+        <div class="circle circle-9" onclick="setScore(9)">9</div>
+        <div class="circle circle-10" onclick="setScore(10)">10</div>
+        <div class="circle circle-x" onclick="setScore('X')">X</div>
+      </div>
+
+      <!-- Score Table -->
+      <div class="row">
+        <table class="highlight centered">
+          <thead>
+            <tr>
+              <th>X</th>
+              <th>10</th>
+              <th>9</th>
+              <th>8</th>
+              <th>7</th>
+              <th>0</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <input type="text" id="score-X" class="score-input" readonly />
+              </td>
+              <td>
+                <input type="text" id="score-10" class="score-input" readonly />
+              </td>
+              <td>
+                <input type="text" id="score-9" class="score-input" readonly />
+              </td>
+              <td>
+                <input type="text" id="score-8" class="score-input" readonly />
+              </td>
+              <td>
+                <input type="text" id="score-7" class="score-input" readonly />
+              </td>
+              <td>
+                <input type="text" id="score-0" class="score-input" readonly />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Total Score -->
+      <div class="row center-align">
+        <span class="total-score">Total Score: </span
+        ><span id="total-score" class="blue-text text-darken-2 total-score"
+          >0</span
+        >
+      </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+      const scores = {
+        X: 0,
+        10: 0,
+        9: 0,
+        8: 0,
+        7: 0,
+        0: 0,
+      };
+
+      function setScore(scoreType) {
+        scores[scoreType]++;
+        document.getElementById(`score-${scoreType}`).value = scores[scoreType];
+        updateTotalScore();
+      }
+
+      function updateTotalScore() {
+        const total =
+          scores.X * 10 +
+          scores["10"] * 10 +
+          scores["9"] * 9 +
+          scores["8"] * 8 +
+          scores["7"] * 7;
+        document.getElementById("total-score").innerText = total;
+      }
+    </script>
+  </body>
+</html>

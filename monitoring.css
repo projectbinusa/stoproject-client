@@ -44,6 +44,7 @@ body {
 
 .target-img {
   width: 85%;
+  position: relative;
   /* height: 500rem; */
   border-radius: 10px;
 }
@@ -79,6 +80,91 @@ body {
   text-align: center;
   padding: 5px;
 }
+
+.circle-container {
+  position: relative;
+  /* width: 300px;
+  height: 400px; */
+  margin: 0 auto;
+  top: -26rem;
+  left: 22%;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 375px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: white;
+}
+
+.circle-0 {
+  background-color: transparent;
+  /* border: 4px solid red; */
+  width: 390px;
+  height: 448px;
+  top: -60px;
+  left: -48px;
+  border-top-left-radius: 120px;
+  border-top-right-radius: 120px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  /* border-radius: 0px; */
+}
+
+.circle-container .circle-0 .null {
+  color: white;
+  top: -20px;
+}
+
+.circle-7 {
+  /* background-color: black; */
+  /* border: 4px solid red; */
+  width: 279px;
+  height: 400px;
+  top: -32px;
+  left: 5px;
+}
+
+.circle-8 {
+  /* background-color: black; */
+  /* border: 4px solid red; */
+  width: 209px;
+  height: 300px;
+  top: 17px;
+  left: 40px;
+}
+
+.circle-9 {
+  /* background-color: black; */
+  /* border: 4px solid red; */
+  width: 139px;
+  height: 195px;
+  top: 70px;
+  left: 75px;
+}
+
+.circle-10 {
+  /* background-color: black; */
+  /* border: 4px solid red; */
+  width: 80px;
+  height: 115px;
+  top: 110px;
+  left: 105px;
+}
+
+.circle-x {
+  /* background-color: red; */
+  /* border: 4px solid white; */
+  width: 25px;
+  height: 55px;
+  top: 140px;
+  left: 132px;
+}
+
+
 
 .form-group {
   display: flex;

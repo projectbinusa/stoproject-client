@@ -24,17 +24,24 @@
       <h3>Scoring System</h3>
     </header>
 
-    <!-- <div class="card">
-        <div class="card-content">
-        </div>
-      </div> -->
     <div class="row content">
       <!-- Left Panel -->
       <div class="col s12 m10 center-align">
         <div class="row card">
-          <img src="target.png" alt="Target" class="responsive-img target-img">
+          <!-- Gunakan map dan area untuk target interaktif -->
+          <img src="target.png" alt="Target" class="responsive-img target-img" usemap="#target-map">
+          <!-- Definisikan area lingkaran untuk setiap skor -->
+          <div class="circle-container">
+            <div class="circle circle-0" onclick="setScore(0)"><span class="null"></span></div>
+            <div class="circle circle-7" onclick="setScore(7)"></div>
+            <div class="circle circle-8" onclick="setScore(8)"></div>
+            <div class="circle circle-9" onclick="setScore(9)"></div>
+            <div class="circle circle-10" onclick="setScore(10)"></div>
+            <div class="circle circle-x" onclick="setScore('X')"></div>
+          </div>
         </div>
       </div>
+
       <!-- Right Panel -->
       <div class="col s12 m8">
         <div class="card">
@@ -49,7 +56,7 @@
 
             <!-- Logo -->
             <div class="center-align">
-              <img src="./logo.png" width="150" height="120" alt="Logo">
+              <img src="./logo.png" width="180" height="120" alt="Logo">
             </div>
 
             <!-- Score Table -->
@@ -85,20 +92,19 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><input type="text" class="score-input" readonly></td>
-                    <td><input type="text" class="score-input" readonly></td>
-                    <td><input type="text" class="score-input" readonly></td>
-                    <td><input type="text" class="score-input" readonly></td>
-                    <td><input type="text" class="score-input" readonly></td>
-                    <td><input type="text" class="score-input" readonly></td>
+                    <td><input type="text" class="score-input" id="score-X" readonly></td>
+                    <td><input type="text" class="score-input" id="score-10" readonly></td>
+                    <td><input type="text" class="score-input" id="score-9" readonly></td>
+                    <td><input type="text" class="score-input" id="score-8" readonly></td>
+                    <td><input type="text" class="score-input" id="score-7" readonly></td>
+                    <td><input type="text" class="score-input" id="score-0" readonly></td>
                   </tr>
                 </tbody>
               </table>
             </div>
             <!-- Total Score -->
             <div class="row center-align">
-              <span class="total-score">Total Score: </span><span class="blue-text text-darken-2 total-score">X
-                X</span>
+              <span class="total-score">Total Score: </span><span class="blue-text text-darken-2 total-score" id="total-score"></span>
             </div>
             <!-- Buttons -->
             <div class="card-action center-align">
@@ -106,7 +112,7 @@
                   class="material-symbols-outlined">
                   score
                 </span></a>
-              <a title="Reset" class="waves-effect waves-light btn green darken-2 btn-full-width"><span
+              <a title="Reset" class="waves-effect waves-light btn green darken-2 btn-full-width" onclick="resetScores()"><span
                   class="material-symbols-outlined">
                   restart_alt
                 </span></a>
@@ -118,34 +124,60 @@
                 class="waves-effect waves-light btn orange darken-2 btn-full-width material-icons">tune
               </a>
             </div>
-            <div class="card-action center-align">
-            </div>
-            <!-- <div class="card-action center-align">
-            </div> -->
           </div>
         </div>
-
-        <!-- <div class="card">
-          <div class="card-content"> -->
-
-
-        <!-- </div> -->
-
-        <!-- </div> -->
       </div>
-      <!-- <div class="col s12 m6">
-        <div class="card">
-          <div class="card-content">
-          </div>
-        </div>
-      </div> -->
     </div>
-
-
   </div>
 
   <!-- Import Materialize JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <script>
+      // Inisialisasi skor awal
+      let scores = {
+        X: 0,
+        10: 0,
+        9: 0,
+        8: 0,
+        7: 0,
+        0: 0
+      };
+
+      // Fungsi untuk menambahkan skor
+      function setScore(scoreType) {
+        scores[scoreType]++;
+        document.getElementById(`score-${scoreType}`).value = scores[scoreType];
+        updateTotalScore();
+      }
+
+      // Fungsi untuk menghitung total skor
+      function updateTotalScore() {
+        const total =
+          scores.X * 10 +  // Nilai X dihitung sebagai 10 poin
+          scores["10"] * 10 +
+          scores["9"] * 9 +
+          scores["8"] * 8 +
+          scores["7"] * 7 +
+          scores["0"] * 0; // Nilai 0 tidak menambah apapun
+        document.getElementById("total-score").innerText = total;
+      }
+
+      // Fungsi untuk mereset skor
+      function resetScores() {
+        scores = {
+          X: 0,
+          10: 0,
+          9: 0,
+          8: 0,
+          7: 0,
+          0: 0
+        };
+        document.querySelectorAll('.score-input').forEach(input => input.value = '');
+        document.getElementById("total-score").innerText = '';
+      }
+  </script>
+
 </body>
 
 </html>
