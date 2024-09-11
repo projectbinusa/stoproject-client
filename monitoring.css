@@ -6,7 +6,6 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
   background-color: #f4f4f4;
 }
 
@@ -20,14 +19,18 @@ body {
   background-color: #0b1073;
   color: white;
   padding: 15px;
-  border-radius: 5px;
   width: 100%;
+}
+
+.header h3 {
+  font-weight: 900;
 }
 
 .content {
   display: flex;
-  justify-content: space-around;
-  margin-top: 20px;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding: 0 10px;
   width: 100%;
 }
 
@@ -49,7 +52,7 @@ body {
 }
 
 .target-img {
-  width: 85%;
+  width: 100%;
   position: relative;
   border-radius: 10px;
 }
@@ -93,9 +96,9 @@ body {
 .circle-0 {
   background-color: transparent;
   width: 390px;
-  height: 448px;
-  top: -60px;
-  left: -48px;
+  height: 438px;
+  top: -80px;
+  left: -65px;
   border-top-left-radius: 120px;
   border-top-right-radius: 120px;
   border-bottom-left-radius: 20px;
@@ -108,38 +111,43 @@ body {
 }
 
 .circle-7 {
+  background-color: transparent;
   width: 279px;
-  height: 400px;
-  top: -32px;
-  left: 5px;
+  height: 405px;
+  top: -70px;
+  left: -12px;
 }
 
 .circle-8 {
+  background-color: transparent;
   width: 209px;
   height: 300px;
-  top: 17px;
-  left: 40px;
+  top: -17px;
+  left: 23px;
 }
 
 .circle-9 {
-  width: 139px;
+  background-color: transparent;
+  width: 138px;
   height: 195px;
-  top: 70px;
-  left: 75px;
+  top: 35px;
+  left: 59px;
 }
 
 .circle-10 {
-  width: 80px;
-  height: 115px;
-  top: 110px;
-  left: 105px;
+  background-color: transparent;
+  width: 75px;
+  height: 105px;
+  top: 80px;
+  left: 90px;
 }
 
 .circle-x {
-  width: 25px;
-  height: 55px;
-  top: 140px;
-  left: 132px;
+  background-color: red;
+  width: 20px;
+  height: 50px;
+  top: 107px;
+  left: 118px;
 }
 
 .form-group {
