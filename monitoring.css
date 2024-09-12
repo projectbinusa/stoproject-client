@@ -233,7 +233,14 @@ body {
 .logo {
   margin-top: 0;
 }
-
+.red-dot {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: white;
+  pointer-events: none;
+}
 @media (max-width: 768px) {
   .content {
     flex-direction: column;
