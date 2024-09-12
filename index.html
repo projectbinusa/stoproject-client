@@ -140,21 +140,24 @@
                 onclick="resetScores()"><span class="material-symbols-outlined">
                   restart_alt
                 </span> Reset</a>
-              <a title="Koreksi" class="waves-effect waves-light btn blue darken-2 btn-full-width"
-                onclick="resetScores()"><span class="material-symbols-outlined">
+              <a id="koreksi-button" title="Koreksi" class="waves-effect waves-light btn blue darken-2 btn-full-width"
+                onclick="toggleKoreksi()"><span class="material-symbols-outlined">
                   fact_check
                 </span> Koreksi</a>
+
+              <!-- <a
+                    title="Kalibrasi"
+                    class="waves-effect waves-light btn orange darken-2 btn-full-width material-icons"
+                    >tune
+                  </a><span> Kalibrasi</span> -->
+            </div>
+            <div class="card-action center-align">
               <a title="Print" class="waves-effect waves-light btn yellow darken-2 btn-full-width"><span
                   class="material-symbols-outlined"> print </span> Print</a>
               <a title="Kalibrasi" class="waves-effect waves-light btn orange darken-2btn-full-width"><span
                   class="material-symbols-outlined">
                   list
                 </span> Kalibrasi</a>
-              <!-- <a
-                    title="Kalibrasi"
-                    class="waves-effect waves-light btn orange darken-2 btn-full-width material-icons"
-                    >tune
-                  </a><span> Kalibrasi</span> -->
             </div>
           </div>
         </div>
@@ -256,6 +259,25 @@
 
       circleContainer.appendChild(redDot);
     }</script>
+
+  <script>
+    let isKoreksiActive = false;
+
+    function toggleKoreksi() {
+      const koreksiButton = document.getElementById("koreksi-button");
+      const scoreInputs = document.querySelectorAll(".score-input");
+
+      if (isKoreksiActive) {
+        koreksiButton.innerHTML = '<span class="material-symbols-outlined">fact_check</span> Koreksi';
+        scoreInputs.forEach(input => input.readOnly = true);
+      } else {
+        koreksiButton.innerHTML = '<span class="material-symbols-outlined">done</span> Selesai Koreksi';
+        scoreInputs.forEach(input => input.readOnly = false);
+      }
+
+      isKoreksiActive = !isKoreksiActive;
+    }
+  </script>
 
 
 </body>
