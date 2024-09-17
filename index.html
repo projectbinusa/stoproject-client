@@ -29,11 +29,9 @@
     <div class="row content">
       <!-- Left Panel -->
       <div class="col s12 m10 center-align">
-        <div class="row card">
-          <!-- Gunakan map dan area untuk target interaktif -->
+        <div class="card">
           <img src="target.png" alt="Target" class="responsive-img target-img" usemap="#target-map" />
-          <!-- Definisikan area lingkaran untuk setiap skor -->
-          <div class="circle-container" id="circle-container" onclick="showRedDot(event)">
+          <div class="circle-container  " id="circle-container" onclick="showRedDot(event)">
             <div class="circle circle-0" onclick="setScore(0)">
               <span class="null"></span>
             </div>
@@ -42,7 +40,6 @@
             <div class="circle circle-9" onclick="setScore(9)"></div>
             <div class="circle circle-10" onclick="setScore(10)"></div>
             <div class="circle circle-x" onclick="setScore('X')"></div>
-            <!-- <div class="red-dot" id="red-dot"></div> -->
           </div>
         </div>
         <div class="card-action">
