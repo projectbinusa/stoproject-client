@@ -52,7 +52,7 @@ body {
 }
 
 .target-img {
-  width: 100%;
+  width: auto;
   position: relative;
   border-radius: 10px;
 }
@@ -75,12 +75,15 @@ body {
   text-align: center;
   padding: 5px;
 }
-
+/*
 .circle-container {
+  border: 3px blue;
   position: relative;
+  width: auto;
   margin: 0 auto;
   top: -26rem;
   left: 22%;
+  padding: 20px;
 }
 
 .circle {
@@ -91,69 +94,131 @@ body {
   align-items: center;
   cursor: pointer;
   color: white;
-}
+} */
 
 .circle-0 {
   background-color: transparent;
-  border:2px solid red;
-  width: 390px;
-  height: 438px;
-  top: -80px;
-  left: -65px;
+  border: 2px solid red;
+  width: 598px;
+  height: 645px;
+  /* top: 20%; */
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* top: -320px;
+  left: -95px; */
   border-top-left-radius: 120px;
   border-top-right-radius: 120px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 }
 
+.circle-container {
+  /* border-radius: 347px; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 200px;
+  border: 6px solid red;
+}
+
+.circle-7 {
+  width: 417px;
+  height: 597px;
+  top: 65%;
+  left: 49.5%;
+  transform: translate(-50%, -50%);
+}
+
+.circle-8 {
+  width: 320px;
+  height: 450px;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.circle-9 {
+  width: 207px;
+  height: 300px;
+  top: 65%;
+  left: 49.5%;
+  transform: translate(-50%, -50%);
+}
+
+.circle-10 {
+  width: 120px;
+  height: 170px;
+  top: 65%;
+  left: 49.5%;
+  transform: translate(-50%, -50%);
+}
+
+.circle-x {
+  width: 32px;
+  height: 72.8px;
+  top: 65%;
+  left: 49.7%;
+  transform: translate(-50%, -50%);
+  /* border: 6px solid blue; */
+  /* background-color: rgb(140, 0, 255); */
+}
+
+
 .circle-container .circle-0 .null {
   color: white;
   top: -20px;
 }
 
-.circle-7 {
+/* .circle-7 {
   background-color: transparent;
-  border:2px solid red;
-  width: 279px;
-  height: 405px;
-  top: -70px;
-  left: -12px;
+  border: 2px solid red;
+  width: 460px;
+  height: 659px;
+  top: -305px;
+  left: -25px;
 }
 
 .circle-8 {
   background-color: transparent;
-  border:2px solid red;
-  width: 209px;
-  height: 300px;
-  top: -17px;
-  left: 23px;
+  border: 2px solid red;
+  width: 350px;
+  height: 500px;
+  top: -227px;
+  left: 30px;
 }
 
 .circle-9 {
   background-color: transparent;
-  border:2px solid red;
-  width: 138px;
-  height: 195px;
-  top: 35px;
-  left: 59px;
+  border: 2px solid red;
+  width: 218px;
+  height: 315px;
+  top: -135px;
+  left: 95px;
 }
 
 .circle-10 {
   background-color: transparent;
-  border:2px solid red;
-  width: 75px;
-  height: 105px;
-  top: 80px;
-  left: 90px;
+  border: 2px solid red;
+  width: 125px;
+  height: 180px;
+  top: -68px;
+  left: 141px;
 }
 
 .circle-x {
-  background-color: red;
-  width: 20px;
-  height: 50px;
-  top: 107px;
-  left: 118px;
-}
+  background-color: transparent;
+  width: 30px;
+  height: 80px;
+  top: -15px;
+  left: 188px;
+} */
 
 .form-group {
   display: flex;
