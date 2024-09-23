@@ -303,8 +303,8 @@ body {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: white;
-  pointer-events: none;
+  background-color: red;
+  pointer-events: auto;
 }
 @media (max-width: 768px) {
   .content {
